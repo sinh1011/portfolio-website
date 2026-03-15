@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Võ Trường Sinh - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">sinh1011</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Trang chủ</a></li>
+      <li><a href="#about">Giới thiệu</a></li>
+      <li><a href="#skills">Kỹ năng</a></li>
+      <li><a href="#projects">Dự án</a></li>
+      <li><a href="#contact">Liên hệ</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="greeting">Xin chào, mình là</p>
+      <h1 class="name">Võ Trường Sinh</h1>
+      <p class="role" id="typewriter"></p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">Xem dự án</a>
+        <a href="#contact" class="btn btn-outline">Liên hệ</a>
+      </div>
+    </div>
+    <div class="hero-art">💻</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2 class="section-title">Giới thiệu</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Xin chào! Mình là Sinh, một lập trình viên Frontend đam mê tạo ra những trải nghiệm web đẹp và hỏu dụng.</p>
+        <p>Mình thích học các công nghệ mới và giải quyết các vấn đề thông qua code.</p>
+        <div class="about-info">
+          <div class="info-item"><span>📍</span> Việt Nam</div>
+          <div class="info-item"><span>🎓</span> Sinh viên CNTT</div>
+          <div class="info-item"><span>💻</span> Frontend Developer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section-alt" id="skills">
+    <h2 class="section-title">Kỹ năng</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">🎨</div>
+        <h3>HTML &amp; CSS</h3>
+        <p>Semantic HTML5, Flexbox, Grid, Responsive Design</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">⚡</div>
+        <h3>JavaScript</h3>
+        <p>ES6+, DOM Manipulation, Async/Await, Local Storage</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">📁</div>
+        <h3>Version Control</h3>
+        <p>Git, GitHub, Branch management</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">📱</div>
+        <h3>Responsive Design</h3>
+        <p>Mobile-first, Media Queries, Cross-browser</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <h2 class="section-title">Dự án</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-icon">💰</div>
+        <h3>Expense Tracker</h3>
+        <p>Quản lý chi tiêu cá nhân với biểu đồ tổng kết</p>
+        <div class="project-tags">
+          <span>HTML</span><span>CSS</span><span>JS</span>
+        </div>
+        <a href="https://github.com/sinh1011/expense-tracker" class="project-link" target="_blank">Xem trên GitHub →</a>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🌦️</div>
+        <h3>Weather App</h3>
+        <p>Tra cứu thời tiết theo thành phố với OpenWeatherMap API</p>
+        <div class="project-tags">
+          <span>HTML</span><span>CSS</span><span>API</span>
+        </div>
+        <a href="https://github.com/sinh1011/weather-app" class="project-link" target="_blank">Xem trên GitHub →</a>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🗚️</div>
+        <h3>Calculator</h3>
+        <p>Máy tính với giao diện hiện đại và đầy đủ chức năng</p>
+        <div class="project-tags">
+          <span>HTML</span><span>CSS</span><span>JS</span>
+        </div>
+        <a href="https://github.com/sinh1011/calculator" class="project-link" target="_blank">Xem trên GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-alt" id="contact">
+    <h2 class="section-title">Liên hệ</h2>
+    <div class="contact-box">
+      <p>Mình luôn sẵn sàng cho các cơ hội hợp tác mới!</p>
+      <div class="contact-links">
+        <a href="https://github.com/sinh1011" class="contact-link" target="_blank">
+          <span>💻</span> GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Võ Trường Sinh. Made with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
