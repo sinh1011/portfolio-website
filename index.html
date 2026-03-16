@@ -3,131 +3,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Võ Trường Sinh - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Võ Trường Sinh | Frontend Developer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
-    <div class="nav-logo">sinh1011</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Trang chủ</a></li>
-      <li><a href="#about">Giới thiệu</a></li>
-      <li><a href="#skills">Kỹ năng</a></li>
-      <li><a href="#projects">Dự án</a></li>
-      <li><a href="#contact">Liên hệ</a></li>
-    </ul>
-    <button class="menu-toggle" id="menuToggle">☰</button>
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">&lt;VTS /&gt;</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Trang chủ</a></li>
+        <li><a href="#about" class="nav-link">Về tôi</a></li>
+        <li><a href="#skills" class="nav-link">Kỹ năng</a></li>
+        <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-blob blob-1"></div>
+      <div class="hero-blob blob-2"></div>
+      <div class="hero-grid"></div>
+    </div>
     <div class="hero-content">
-      <p class="greeting">Xin chào, mình là</p>
-      <h1 class="name">Võ Trường Sinh</h1>
-      <p class="role" id="typewriter"></p>
-      <div class="hero-btns">
-        <a href="#projects" class="btn btn-primary">Xem dự án</a>
-        <a href="#contact" class="btn btn-outline">Liên hệ</a>
+      <p class="hero-greeting fade-up">Xin chào, mình là</p>
+      <h1 class="hero-name fade-up delay-1">Võ Trường Sinh</h1>
+      <p class="hero-role fade-up delay-2">
+        <span class="typewriter" id="typewriter"></span>
+        <span class="cursor">|</span>
+      </p>
+      <p class="hero-desc fade-up delay-3">Fresher Frontend Developer tại Hồ Chí Minh — đam mê xây dựng giao diện đẹp và trải nghiệm người dùng mượt mà.</p>
+      <div class="hero-actions fade-up delay-4">
+        <a href="#about" class="btn btn-primary">Tìm hiểu thêm</a>
+        <a href="#contact" class="btn btn-outline">Liên hệ tôi</a>
       </div>
     </div>
-    <div class="hero-art">💻</div>
+    <div class="hero-scroll">
+      <span>Cuộn xuống</span>
+      <div class="scroll-indicator"><div class="scroll-dot"></div></div>
+    </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="section" id="about">
-    <h2 class="section-title">Giới thiệu</h2>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>Xin chào! Mình là Sinh, một lập trình viên Frontend đam mê tạo ra những trải nghiệm web đẹp và hỏu dụng.</p>
-        <p>Mình thích học các công nghệ mới và giải quyết các vấn đề thông qua code.</p>
-        <div class="about-info">
-          <div class="info-item"><span>📍</span> Việt Nam</div>
-          <div class="info-item"><span>🎓</span> Sinh viên CNTT</div>
-          <div class="info-item"><span>💻</span> Frontend Developer</div>
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">// about me</p>
+        <h2 class="section-title">Về Tôi</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card fade-up">
+          <div class="about-avatar">
+            <img src="https://avatars.githubusercontent.com/u/sinh1011" alt="Võ Trường Sinh" onerror="this.src='https://ui-avatars.com/api/?name=Vo+Truong+Sinh&background=6366f1&color=fff&size=200'">
+          </div>
+        </div>
+        <div class="about-info fade-up delay-1">
+          <div class="code-block">
+            <div class="code-header">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="code-filename">truongSinh.js</span>
+            </div>
+            <pre class="code-body"><code><span class="kw">const</span> <span class="var">truongSinh</span> = {
+  <span class="key">name</span>:       <span class="str">"Võ Trường Sinh"</span>,
+  <span class="key">role</span>:       <span class="str">"Fresher Frontend Developer"</span>,
+  <span class="key">education</span>: <span class="str">"ĐH Sài Gòn - CNTT"</span>,
+  <span class="key">location</span>:  <span class="str">"Hồ Chí Minh, Việt Nam"</span>,
+  <span class="key">passions</span>:  [<span class="str">"Frontend"</span>, <span class="str">"UI/UX"</span>, <span class="str">"ReactJS"</span>],
+  <span class="key">goal</span>:      <span class="str">"Xây dựng UI đẹp & UX tốt"</span>,
+  <span class="key">available</span>: <span class="bool">true</span> <span class="cmt">// Mở cơ hội hợp tác!</span>
+};</code></pre>
+          </div>
+          <div class="about-facts">
+            <div class="fact-item">
+              <span class="fact-icon">🎓</span>
+              <div>
+                <strong>Đại học Sài Gòn</strong>
+                <p>Công nghệ Thông tin</p>
+              </div>
+            </div>
+            <div class="fact-item">
+              <span class="fact-icon">📍</span>
+              <div>
+                <strong>Hồ Chí Minh</strong>
+                <p>Việt Nam</p>
+              </div>
+            </div>
+            <div class="fact-item">
+              <span class="fact-icon">💼</span>
+              <div>
+                <strong>Đang tìm việc</strong>
+                <p>Fresher Frontend Developer</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section class="section section-alt" id="skills">
-    <h2 class="section-title">Kỹ năng</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-icon">🎨</div>
-        <h3>HTML &amp; CSS</h3>
-        <p>Semantic HTML5, Flexbox, Grid, Responsive Design</p>
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">// skills</p>
+        <h2 class="section-title">Kỹ Năng</h2>
       </div>
-      <div class="skill-card">
-        <div class="skill-icon">⚡</div>
-        <h3>JavaScript</h3>
-        <p>ES6+, DOM Manipulation, Async/Await, Local Storage</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">📁</div>
-        <h3>Version Control</h3>
-        <p>Git, GitHub, Branch management</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">📱</div>
-        <h3>Responsive Design</h3>
-        <p>Mobile-first, Media Queries, Cross-browser</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="section" id="projects">
-    <h2 class="section-title">Dự án</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-icon">💰</div>
-        <h3>Expense Tracker</h3>
-        <p>Quản lý chi tiêu cá nhân với biểu đồ tổng kết</p>
-        <div class="project-tags">
-          <span>HTML</span><span>CSS</span><span>JS</span>
+      <div class="skills-grid">
+        <div class="skill-group fade-up">
+          <h3 class="skill-group-title"><span class="tag">&lt;</span> Core <span class="tag">/&gt;</span></h3>
+          <div class="skill-pills">
+            <span class="pill pill-html">HTML5</span>
+            <span class="pill pill-css">CSS3</span>
+            <span class="pill pill-js">JavaScript</span>
+            <span class="pill pill-cpp">C++</span>
+          </div>
         </div>
-        <a href="https://github.com/sinh1011/expense-tracker" class="project-link" target="_blank">Xem trên GitHub →</a>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">🌦️</div>
-        <h3>Weather App</h3>
-        <p>Tra cứu thời tiết theo thành phố với OpenWeatherMap API</p>
-        <div class="project-tags">
-          <span>HTML</span><span>CSS</span><span>API</span>
+        <div class="skill-group fade-up delay-1">
+          <h3 class="skill-group-title"><span class="tag">&lt;</span> Framework <span class="tag">/&gt;</span></h3>
+          <div class="skill-pills">
+            <span class="pill pill-react">React</span>
+            <span class="pill pill-tailwind">Tailwind CSS</span>
+          </div>
         </div>
-        <a href="https://github.com/sinh1011/weather-app" class="project-link" target="_blank">Xem trên GitHub →</a>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">🗚️</div>
-        <h3>Calculator</h3>
-        <p>Máy tính với giao diện hiện đại và đầy đủ chức năng</p>
-        <div class="project-tags">
-          <span>HTML</span><span>CSS</span><span>JS</span>
+        <div class="skill-group fade-up delay-2">
+          <h3 class="skill-group-title"><span class="tag">&lt;</span> Tools <span class="tag">/&gt;</span></h3>
+          <div class="skill-pills">
+            <span class="pill pill-git">Git</span>
+            <span class="pill pill-github">GitHub</span>
+            <span class="pill pill-vscode">VS Code</span>
+            <span class="pill pill-figma">Figma</span>
+            <span class="pill pill-ps">Photoshop</span>
+          </div>
         </div>
-        <a href="https://github.com/sinh1011/calculator" class="project-link" target="_blank">Xem trên GitHub →</a>
+      </div>
+      <div class="learning-section fade-up delay-3">
+        <h3>📚 Đang học</h3>
+        <div class="progress-list">
+          <div class="progress-item">
+            <div class="progress-label"><span>ReactJS Nâng cao</span><span>80%</span></div>
+            <div class="progress-bar"><div class="progress-fill" data-width="80"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label"><span>JavaScript ES6+</span><span>90%</span></div>
+            <div class="progress-bar"><div class="progress-fill" data-width="90"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label"><span>Tailwind CSS</span><span>75%</span></div>
+            <div class="progress-bar"><div class="progress-fill" data-width="75"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label"><span>UI/UX Design</span><span>60%</span></div>
+            <div class="progress-bar"><div class="progress-fill" data-width="60"></div></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="section section-alt" id="contact">
-    <h2 class="section-title">Liên hệ</h2>
-    <div class="contact-box">
-      <p>Mình luôn sẵn sàng cho các cơ hội hợp tác mới!</p>
-      <div class="contact-links">
-        <a href="https://github.com/sinh1011" class="contact-link" target="_blank">
-          <span>💻</span> GitHub
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">// contact</p>
+        <h2 class="section-title">Liên Hệ</h2>
+        <p class="section-desc">Mình luôn mở cơ hội hợp tác và trao đổi. Đừng ngại liên hệ!</p>
+      </div>
+      <div class="contact-grid">
+        <a href="mailto:sinhtruongvo@gmail.com" class="contact-card fade-up">
+          <div class="contact-icon">📧</div>
+          <h3>Email</h3>
+          <p>sinhtruongvo@gmail.com</p>
+        </a>
+        <a href="https://www.facebook.com/truongsinh.vo.77" target="_blank" class="contact-card fade-up delay-1">
+          <div class="contact-icon">🔵</div>
+          <h3>Facebook</h3>
+          <p>truongsinh.vo.77</p>
+        </a>
+        <a href="https://github.com/sinh1011" target="_blank" class="contact-card fade-up delay-2">
+          <div class="contact-icon">🐙</div>
+          <h3>GitHub</h3>
+          <p>sinh1011</p>
         </a>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2024 Võ Trường Sinh. Made with ❤️</p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>Made with <span class="heart">♥</span> by <strong>Võ Trường Sinh</strong></p>
+      <p class="footer-sub">© 2026 · Fresher Frontend Developer</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/typewriter.js"></script>
+  <script src="js/scroll-animations.js"></script>
 </body>
 </html>
